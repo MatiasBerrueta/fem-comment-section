@@ -1,0 +1,51 @@
+.Score-buttons {
+  background-color: var(--backgorund-color);
+  display: flex;
+  align-items: center;
+  place-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  grid-area: scoreDisplay;
+  border-radius: 10px;
+}
+
+.Comment-score {
+  color: var(--blue-highlight);
+  padding: 0.55rem 0.3rem;
+}
+
+.Comment-score-up, .Comment-score-down {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 0.9rem;
+  font-size: 1rem;
+  fill: var(--pale-blue);
+}
+
+.Comment-score-up svg, .Comment-score-down svg {
+  pointer-events: none;
+}
+
+.Comment-score-up:hover, .Comment-score-up[data-active="true"],
+.Comment-score-down:hover, .Comment-score-down[data-active="true"] {
+  fill: var(--blue-highlight);
+}
+
+
+@media (min-width: 700px) {
+  .Score-buttons {
+    flex-direction: column;
+    place-self: start;
+    margin-right: 2rem;
+  }
+
+  .Comment-score {
+    padding: 0.15rem;
+  }
+
+  .Comment-score-up, .Comment-score-down {
+    padding: 0.5rem 1.1rem;
+  }
+}
